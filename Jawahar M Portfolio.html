@@ -1,0 +1,370 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Jawahar M Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow column; a label rail on the left of each section on wide screens, stacked on phones. */
+:root {
+  --bg: #f1f4f6;
+  --surface: #ffffff;
+  --fg: #0f1a24;
+  --muted: #55646f;
+  --line: #d3dbe0;
+  --accent: #0a6f62;
+  --accent-ink: #ffffff;
+  --mark: #e8f3f0;
+
+  --font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1418;
+    --surface: #131c22;
+    --fg: #e6edf0;
+    --muted: #93a3ad;
+    --line: #25333b;
+    --accent: #4fd1b5;
+    --accent-ink: #06201a;
+    --mark: #14302b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1418;
+  --surface: #131c22;
+  --fg: #e6edf0;
+  --muted: #93a3ad;
+  --line: #25333b;
+  --accent: #4fd1b5;
+  --accent-ink: #06201a;
+  --mark: #14302b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 0 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.wrap { max-width: 920px; margin-inline: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+/* top bar */
+.bar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: 8px 24px; padding-block: 20px; border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: 13px;
+}
+.bar .id { font-weight: 500; }
+.bar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.bar nav a { color: var(--muted); text-decoration: none; padding-block: 2px; }
+.bar nav a:hover { color: var(--accent); }
+
+/* hero */
+.hero { padding-block: 56px 48px; border-bottom: 1px solid var(--line); }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 18px;
+}
+h1 {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(44px, 9vw, 84px);
+  line-height: 1; letter-spacing: -0.02em; margin: 0 0 22px; text-wrap: balance;
+}
+.lede { font-size: clamp(18px, 2.4vw, 21px); line-height: 1.5; max-width: 34em; margin: 0 0 28px; text-wrap: pretty; }
+.facts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0;
+  border: 1px solid var(--line); background: var(--surface); margin: 0 0 28px;
+}
+.facts div { padding: 14px 16px; border-right: 1px solid var(--line); min-width: 0; }
+.facts div:last-child { border-right: 0; }
+.facts dt { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+.facts dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .facts div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .facts div:last-child { border-bottom: 0; }
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+  font-family: var(--font-mono); font-size: 14px; font-weight: 500; text-decoration: none;
+  border: 1px solid var(--fg); color: var(--fg); background: transparent; border-radius: 4px; cursor: pointer;
+}
+.btn:hover { background: var(--fg); color: var(--bg); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.08); background: var(--accent); color: var(--accent-ink); }
+
+/* sections */
+section { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px 40px; padding-block: 44px; border-bottom: 1px solid var(--line); }
+section > h2 {
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 500; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); margin: 6px 0 0;
+}
+@media (max-width: 720px) { section { grid-template-columns: minmax(0, 1fr); padding-block: 36px; } }
+.body { min-width: 0; }
+.body p { margin: 0 0 14px; max-width: 62ch; text-wrap: pretty; }
+.body p:last-child { margin-bottom: 0; }
+
+/* skills */
+.skills { margin: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.skills div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.skills dt { color: var(--muted); font-size: 14px; }
+.skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 520px) { .skills div { grid-template-columns: minmax(0, 1fr); } }
+.chip {
+  font-family: var(--font-mono); font-size: 13px; padding: 3px 10px; border: 1px solid var(--line);
+  background: var(--surface); border-radius: 3px;
+}
+
+/* projects */
+.project { padding-block: 0 32px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+.project:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.project h3 { font-family: var(--font-display); font-size: 24px; line-height: 1.2; font-weight: 600; margin: 0 0 10px; text-wrap: balance; }
+.stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; padding: 0; list-style: none; }
+.stack li { font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); background: var(--mark); padding: 2px 9px; border-radius: 3px; }
+.project ul.points { margin: 0; padding-left: 20px; max-width: 62ch; }
+.project ul.points li { margin-bottom: 6px; }
+.fields { margin: 16px 0 0; font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.fields span { color: var(--fg); }
+
+/* education */
+.edu { width: 100%; border-collapse: collapse; }
+.edu th, .edu td { text-align: left; vertical-align: top; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); }
+.edu thead th { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 0; }
+.edu tbody th { font-weight: 500; }
+.edu .sub { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+.edu td.num { font-family: var(--font-mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; }
+.scroll .edu { min-width: 560px; }
+
+/* learning */
+.learn { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.learn li { font-size: 15px; padding: 8px 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 4px; }
+.note { margin-top: 14px; color: var(--muted); font-size: 14px; }
+
+/* contact */
+.contact { display: grid; gap: 0; border-top: 1px solid var(--line); margin: 0; }
+.contact div { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.contact dt { color: var(--muted); font-size: 14px; }
+.contact dd { margin: 0; font-family: var(--font-mono); font-size: 14.5px; overflow-wrap: anywhere; min-width: 0; }
+.contact dd a { text-decoration-color: var(--line); text-underline-offset: 4px; }
+.contact dd a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.copy {
+  font-family: var(--font-mono); font-size: 12.5px; min-height: 36px; padding: 0 12px; cursor: pointer;
+  background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
+}
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+.contact .nocopy { grid-column: 3; }
+@media (max-width: 520px) {
+  .contact div { grid-template-columns: minmax(0, 1fr) auto; }
+  .contact dt { grid-column: 1 / -1; }
+}
+
+footer { padding-top: 28px; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <span class="id">jawahar.m</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="eyebrow">B.E. Computer Science and Engineering, class of 2028</p>
+      <h1>Jawahar M</h1>
+      <p class="lede">I build small software projects in Python and JavaScript, and I am looking for an internship where I can learn from a real engineering team.</p>
+      <dl class="facts">
+        <div><dt>Studying</dt><dd>B.E. Computer Science and Engineering</dd></div>
+        <div><dt>College</dt><dd>VSB College of Engineering and Technical Campus</dd></div>
+        <div><dt>Graduating</dt><dd>2028 (expected)</dd></div>
+      </dl>
+      <div class="links">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://github.com/jawaharofcl" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/jawahar-developer" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://hackerrank.com/profile/jawaharofcl" target="_blank" rel="noopener">HackerRank</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="body">
+        <p>I am a Computer Science and Engineering undergraduate with an interest in software development, programming, databases and web technologies.</p>
+        <p>I am working on my problem-solving through data structures and algorithms, and I want to apply what I have learned in a practical industry setting.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="body">
+        <dl class="skills">
+          <div><dt>Programming</dt><dd><span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span></dd></div>
+          <div><dt>Web</dt><dd><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></dd></div>
+          <div><dt>Database</dt><dd><span class="chip">MySQL</span></dd></div>
+          <div><dt>Tools</dt><dd><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Visual Studio Code</span></dd></div>
+          <div><dt>Core concepts</dt><dd><span class="chip">Data Structures &amp; Algorithms</span><span class="chip">Object-Oriented Programming</span><span class="chip">DBMS</span><span class="chip">Problem Solving</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="body">
+        <article class="project">
+          <h3>Student Management System</h3>
+          <ul class="stack"><li>Python</li><li>MySQL</li></ul>
+          <ul class="points">
+            <li>A basic application that manages student records, including names, roll numbers, marks and attendance.</li>
+            <li>Supports adding, updating, searching and deleting records.</li>
+          </ul>
+          <p class="fields">Records hold: <span>name</span> · <span>roll number</span> · <span>marks</span> · <span>attendance</span></p>
+        </article>
+
+        <article class="project">
+          <h3>Personal Portfolio Website</h3>
+          <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <ul class="points">
+            <li>A responsive personal website presenting education, technical skills, projects and contact information.</li>
+            <li>A clean, user-friendly interface suited to a student profile.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3>Online Quiz Application</h3>
+          <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <ul class="points">
+            <li>A multiple-choice quiz with automatic score calculation.</li>
+            <li>Question navigation and a results screen, built with JavaScript.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="body">
+        <div class="scroll">
+          <table class="edu">
+            <thead>
+              <tr><th scope="col">Level</th><th scope="col">Institution</th><th scope="col">Years / Score</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">B.E. Computer Science and Engineering</th>
+                <td>VSB College of Engineering and Technical Campus</td>
+                <td class="num">2024 – 2028<span class="sub">Expected graduation</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Higher Secondary (12th)</th>
+                <td>Subramania Bharathi Higher Secondary School, Thirukkanur, Puducherry</td>
+                <td class="num">417 / 600<span class="sub">69.50%</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Secondary (10th)</th>
+                <td>Subramania Bharathi Higher Secondary School, Thirukkanur, Puducherry</td>
+                <td class="num">301 / 500<span class="sub">60.20%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning">
+      <h2>Learning</h2>
+      <div class="body">
+        <ul class="learn">
+          <li>Python Programming</li>
+          <li>SQL Fundamentals</li>
+          <li>Git &amp; GitHub Fundamentals</li>
+          <li>Web Development Fundamentals</li>
+          <li>Data Structures &amp; Algorithms Fundamentals</li>
+        </ul>
+        <p class="note">Certificate details will be added as each course is completed.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="border-bottom:0">
+      <h2>Contact</h2>
+      <div class="body">
+        <p>Open to internships and entry-level opportunities. The quickest way to reach me is email.</p>
+        <dl class="contact">
+          <div>
+            <dt>Email</dt>
+            <dd id="c-email">jawaharofcl@gmail.com</dd>
+            <button class="copy" type="button" data-target="c-email">Copy</button>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd id="c-phone">8015848458</dd>
+            <button class="copy" type="button" data-target="c-phone">Copy</button>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/jawaharofcl" target="_blank" rel="noopener">github.com/jawaharofcl</a></dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://linkedin.com/in/jawahar-developer" target="_blank" rel="noopener">linkedin.com/in/jawahar-developer</a></dd>
+          </div>
+          <div>
+            <dt>HackerRank</dt>
+            <dd><a href="https://hackerrank.com/profile/jawaharofcl" target="_blank" rel="noopener">hackerrank.com/profile/jawaharofcl</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Jawahar M · Villupuram, Tamil Nadu, India</span>
+    <span>References available upon request</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-target'));
+    var text = el.textContent.trim();
+    var done = function () {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    };
+    var fallback = function () {
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      btn.textContent = 'Press Ctrl+C';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 2200);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body></html>
